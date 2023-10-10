@@ -13,7 +13,12 @@ export class MediaComponent {
     }
 
     const sum = data.reduce((total, num) => total + num, 0);
-    return sum / data.length;
+    const average = sum / data.length;
+
+    // Redondear a 2 decimales
+    const roundedAverage = Number(average.toFixed(2));
+
+    return roundedAverage;
 }
 
 }
